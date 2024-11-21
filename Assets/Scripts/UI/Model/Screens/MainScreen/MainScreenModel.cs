@@ -39,7 +39,13 @@ namespace SC.UI.Model.Screens.MainScreen
             foreach (var rankDto in leaderboardDto.ranking)
             {
                 var isPlayer = leaderboardDto.playerUID == rankDto.player.uid;
-                var rankBadge = _guiManager.SpriteDatabase.GetRankBadge(rankDto.ranking);
+
+                Sprite rankBadge = null;
+                if (rankDto.ranking <= 3)
+                {
+                    rankBadge = _guiManager.SpriteDatabase.GetRankBadge(rankDto.ranking);
+                }
+
                 var avatar = _guiManager.SpriteDatabase.GetCharacterAvatar(rankDto.player.characterIndex);
                 var countryFlag = _guiManager.SpriteDatabase.GetCountryFlag(rankDto.player.countryCode);
 
