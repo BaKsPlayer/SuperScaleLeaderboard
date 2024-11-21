@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b768efde65ccf4c488de6ec6b341633a, type: 3}
+  m_Name: SpriteDatabase
+  m_EditorClassIdentifier: 
+  _characterAvatars:
+  - id: 1
+    sprite: {fileID: 21300000, guid: 5f41a95991b0345b5af54bb877c741fa, type: 3}
+  - id: 2
+    sprite: {fileID: 21300000, guid: 0f24ce5b9d0f94dada980eb5275fc3b5, type: 3}
+  - id: 3
+    sprite: {fileID: 21300000, guid: eec192395ae41450ab4b8df01b20cd37, type: 3}
+  - id: 4
+    sprite: {fileID: 21300000, guid: 2f24ee6830fd5485083b6518b04786d1, type: 3}
+  - id: 5
+    sprite: {fileID: 21300000, guid: 5a70b8e29789749e8b70cb5d7d04dc41, type: 3}
+  _countryFlags:
+  - countryCode: BR
+    sprite: {fileID: 21300000, guid: 99df6ab2ce5374460a2f4513f9db2dbb, type: 3}
+  - countryCode: CN
+    sprite: {fileID: 21300000, guid: 43d240f911ef34c23a55c7c000e9f1be, type: 3}
+  - countryCode: DE
+    sprite: {fileID: 21300000, guid: 3d62c03a855604025a7a954ba1000918, type: 3}
+  - countryCode: ES
+    sprite: {fileID: 21300000, guid: 52eced1879f5441b1ac470cf81cc1440, type: 3}
+  - countryCode: FR
+    sprite: {fileID: 21300000, guid: f460e323166d64eb0a5d86caef43e870, type: 3}
+  - countryCode: IT
+    sprite: {fileID: 21300000, guid: a56e2aac62d184e09a2d6154a75cf49a, type: 3}
+  - countryCode: US
+    sprite: {fileID: 21300000, guid: 814f9f4d5640448e6b216f68319a7e23, type: 3}
+  _rankBadges:
+  - id: 1
+    sprite: {fileID: 21300000, guid: 617edde68db0a4592990948005291786, type: 3}
+  - id: 2
+    sprite: {fileID: 21300000, guid: 4164668e44bd641859d9983594489da0, type: 3}
+  - id: 3
+    sprite: {fileID: 21300000, guid: 0307fc6f5ff2a4d6ea568911630b9f3f, type: 3}
