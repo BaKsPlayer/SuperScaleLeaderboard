@@ -1,5 +1,4 @@
 using SC.UI.View.Leaderboard;
-using SC.Utils;
 using UnityEngine;
 
 namespace SC.UI.Model.Windows.Leaderboard
@@ -29,7 +28,7 @@ namespace SC.UI.Model.Windows.Leaderboard
             Rank = rankDto.ranking;
             RankBadgeSprite = rankBadge;
 
-            AvatarBackgroundColor = rankDto.player.characterColor.HexToColor();
+            AvatarBackgroundColor = GetAvatarBackgroundColor(rankDto.player.characterColor);
             AvatarSprite = avatar;
 
             FlagSprite = countryFlag;
@@ -39,6 +38,16 @@ namespace SC.UI.Model.Windows.Leaderboard
             PointsCount = rankDto.points;
 
             IsVip = rankDto.player.isVip;
+        }
+
+        private Color GetAvatarBackgroundColor(string hex)
+        {
+            if (ColorUtility.TryParseHtmlString(hex, out Color color))
+            {
+                return color;
+            }
+            
+            return Color.white;
         }
     }
 }

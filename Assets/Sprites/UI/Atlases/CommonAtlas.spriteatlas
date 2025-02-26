@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CommonAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: af40169ba67424ab68add1b5d57fb14c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 48b32130846eb466b97709a84611e321, type: 3}
+  - {fileID: 21300000, guid: 0f3203c3dea8d4f6da2322a29fe7e0bc, type: 3}
+  - {fileID: 21300000, guid: 617edde68db0a4592990948005291786, type: 3}
+  - {fileID: 21300000, guid: b4cc4357de66e475c8182468a436f73a, type: 3}
+  - {fileID: 21300000, guid: 623078872d48441109c78317e88821e3, type: 3}
+  - {fileID: 21300000, guid: 7850b2d95c6bb450383772c968e33c79, type: 3}
+  - {fileID: 21300000, guid: dd36e29baf80246bbaa820cefcd9b9d2, type: 3}
+  - {fileID: 21300000, guid: 4164668e44bd641859d9983594489da0, type: 3}
+  - {fileID: 21300000, guid: 0307fc6f5ff2a4d6ea568911630b9f3f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - IconX
+  - ButtonFrame
+  - BadgeGold
+  - FrameHighlight
+  - WhitePixel
+  - Glow
+  - WindowBackground
+  - BadgeSilver
+  - BadgeBronze
+  m_RenderDataMap: {}
+  m_Tag: CommonAtlas
+  m_IsVariant: 0

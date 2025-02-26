@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a7daea890ba3487289286511713f8bf
+guid: 623078872d48441109c78317e88821e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -143,5 +143,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: leaderboard
+  assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SC.Utils
 {
-    [CreateAssetMenu(fileName = "SpriteDatabase", menuName = "Database/SpriteDatabase")]
+    [CreateAssetMenu(fileName = nameof(SpriteDatabase), menuName = "Database/SpriteDatabase")]
     public class SpriteDatabase : ScriptableObject
     {
         [SerializeField] private List<SpriteEntry> _characterAvatars = new List<SpriteEntry>();
@@ -12,7 +12,7 @@ namespace SC.Utils
 
         public Sprite GetCharacterAvatar(int id)
         {
-            var characterAvatar = _characterAvatars.Find(entry => entry.id == id)?.sprite;
+            var characterAvatar = _characterAvatars.Find(entry => entry.Id == id)?.Sprite;
 
             if (characterAvatar == null)
             {
@@ -24,7 +24,7 @@ namespace SC.Utils
 
         public Sprite GetCountryFlag(string countryCode)
         {
-            var flagSprite = _countryFlags.Find(entry => entry.countryCode == countryCode)?.sprite;
+            var flagSprite = _countryFlags.Find(entry => entry.CountryCode == countryCode)?.Sprite;
 
             if (flagSprite == null)
             {
@@ -36,7 +36,7 @@ namespace SC.Utils
 
         public Sprite GetRankBadge(int id)
         {
-            var rankBadge = _rankBadges.Find(entry => entry.id == id)?.sprite; ;
+            var rankBadge = _rankBadges.Find(entry => entry.Id == id)?.Sprite;
 
             if (rankBadge == null)
             {
@@ -49,15 +49,15 @@ namespace SC.Utils
         [System.Serializable]
         private class SpriteEntry
         {
-            public int id;
-            public Sprite sprite;
+            public int Id;
+            public Sprite Sprite;
         }
 
         [System.Serializable]
         private class CountryFlagEntry
         {
-            public string countryCode;
-            public Sprite sprite;
+            public string CountryCode;
+            public Sprite Sprite;
         }
     }
 }

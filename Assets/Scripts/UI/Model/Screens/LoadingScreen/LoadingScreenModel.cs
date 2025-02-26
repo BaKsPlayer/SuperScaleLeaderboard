@@ -1,3 +1,4 @@
+using SC.Enums;
 using SC.Managers;
 using SC.UI.View.Screens.LoadingScreen;
 
@@ -7,7 +8,7 @@ namespace SC.UI.Model.Screens.LoadingScreen
     {
         private SceneManager _sceneManager;
 
-        public LoadingScreenModel( SceneManager sceneManager)
+        public LoadingScreenModel(SceneManager sceneManager)
         {
             _sceneManager = sceneManager;
         }

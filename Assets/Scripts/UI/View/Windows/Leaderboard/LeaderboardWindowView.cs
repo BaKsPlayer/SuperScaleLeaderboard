@@ -8,18 +8,27 @@ namespace SC.UI.View.Leaderboard
         [SerializeField] private ScrollRect _scrollRect;
         [SerializeField] private LeaderboardItemView _itemViewPrefab;
         [SerializeField] private float _maxScrollRectHeight;
-        [SerializeField] private Button _closeButton;
 
-        private void Awake()
-        {
-            _closeButton.onClick.AddListener(Close);
-        }
-
+        private ILeaderboardWindowViewModel _model;
+        
         public void Init(ILeaderboardWindowViewModel model)
         {
-            ClearContent();
+            _model = model;
 
-            foreach (var itemModel in model.ItemModels)
+            _model.ItemModels.CollectionChanged += RefreshContent;
+            RefreshContent();
+        }
+
+        private void RefreshContent()
+        {
+            ClearContent();
+            
+            if (_model.ItemModels == null || _model.ItemModels.Count == 0)
+            {
+                return;
+            }
+            
+            foreach (var itemModel in _model.ItemModels)
             {
                 var itemView = Instantiate(_itemViewPrefab, _scrollRect.content);
                 itemView.Init(itemModel);
@@ -44,12 +53,13 @@ namespace SC.UI.View.Leaderboard
             var height = Mathf.Clamp(_scrollRect.content.sizeDelta.y, 0, _maxScrollRectHeight);
             rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, height);
 
-            _scrollRect.vertical = _scrollRect.GetComponent<RectTransform>().sizeDelta.y < _scrollRect.content.sizeDelta.y;
+            _scrollRect.vertical = rectTransform.sizeDelta.y < _scrollRect.content.sizeDelta.y;
         }
 
         private void OnDestroy()
         {
-            _closeButton.onClick.RemoveAllListeners();
+            _model.ItemModels.CollectionChanged -= RefreshContent;
+            _model.Dispose();
         }
     }
 }

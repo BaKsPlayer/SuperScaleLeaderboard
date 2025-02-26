@@ -4,28 +4,29 @@ using UnityEngine;
 
 namespace SC.Managers
 {
-    public class GuiManager : MonoBehaviour
+    public class GuiManager
     {
-        [SerializeField] private SpriteDatabase _spriteDatabase;
-        [SerializeField] private GuiDatabase _guiDatabase;
-        [SerializeField] private WindowParent _windowParentPrefab;
-        [SerializeField] private Canvas _guiCanvasPrefab;
+        public SpriteDatabase SpriteDatabase { get; }
 
-        public SpriteDatabase SpriteDatabase => _spriteDatabase;
-
+        private readonly Canvas _guiCanvas;
+        private readonly WindowParent _windowParentPrefab;
+        private readonly GuiDatabase _guiDatabase;
+        
         private BaseScreen _currentScreen;
-        private Canvas _guiCanvas;
 
-        private void Awake()
+        private GuiManager(Canvas guiCanvas, WindowParent windowParentPrefab)
         {
-            _guiCanvas = Instantiate(_guiCanvasPrefab);
-            DontDestroyOnLoad(_guiCanvas);
+            _guiCanvas = guiCanvas;
+            _windowParentPrefab = windowParentPrefab;
+
+            SpriteDatabase = Resources.Load<SpriteDatabase>($"Databases/{nameof(SC.Utils.SpriteDatabase)}");
+            _guiDatabase = Resources.Load<GuiDatabase>($"Databases/{nameof(GuiDatabase)}");
         }
 
         public T ShowWindow<T>() where T : BaseWindow
         {
-            var windowParent = Instantiate(_windowParentPrefab, _currentScreen.transform);
-            var window = Instantiate(_guiDatabase.GetWindow<T>(), windowParent.transform);
+            var windowParent = Object.Instantiate(_windowParentPrefab, _currentScreen.transform);
+            var window = Object.Instantiate(_guiDatabase.GetWindow<T>(), windowParent.transform);
 
             windowParent.SetWindow(window);
             window.Open();
@@ -46,7 +47,7 @@ namespace SC.Managers
             }
 
             var screenPrefab = _guiDatabase.GetScreen<T>();
-            var screen = Instantiate(screenPrefab, _guiCanvas.transform);
+            var screen = Object.Instantiate(screenPrefab, _guiCanvas.transform);
             _currentScreen = screen;
 
             return screen;

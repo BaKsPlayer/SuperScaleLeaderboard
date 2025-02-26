@@ -1,3 +1,4 @@
+using SC.Enums;
 using SC.ServerInteraction;
 using SC.UI.Model.Screens.LoadingScreen;
 using SC.UI.Model.Screens.MainScreen;
@@ -9,8 +10,8 @@ namespace SC.Managers
 {
     public class SceneManager 
     {
-        private GuiManager _guiManager;
-        private IServerConnector _serverConnector; 
+        private readonly GuiManager _guiManager;
+        private readonly IServerConnector _serverConnector; 
 
         public SceneManager(GuiManager guiManager, IServerConnector serverConnector)
         {
@@ -37,11 +38,5 @@ namespace SC.Managers
 
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneType.ToString());
         }
-    }
-
-    public enum SceneType
-    {
-        Main,
-        Loading
     }
 }

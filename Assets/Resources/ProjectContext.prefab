@@ -75,7 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4014c57e7898c4008ba6b39710e71112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _guiManager: {fileID: 322025734843960272, guid: ae4bca988d2ba4e9d91f08b21d2aa2e8, type: 3}
+  _guiCanvasPrefab: {fileID: 7458687604480359482, guid: 00ffb4c9f6fb24faa894399248cb2d14, type: 3}
+  _windowParentPrefab: {fileID: 4882133316239566661, guid: 95d15326e9253463d9a34beacc5eff72, type: 3}
 --- !u!114 &7436208146552513777
 MonoBehaviour:
   m_ObjectHideFlags: 0

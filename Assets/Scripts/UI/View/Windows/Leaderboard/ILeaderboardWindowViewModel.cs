@@ -1,9 +1,10 @@
-using System.Collections.Generic;
+using System;
+using SC.Utils;
 
 namespace SC.UI.View.Leaderboard
 {
-    public interface ILeaderboardWindowViewModel
+    public interface ILeaderboardWindowViewModel : IDisposable
     {
-        List<ILeaderboardItemViewModel> ItemModels { get; }
+        ReactiveCollection<ILeaderboardItemViewModel> ItemModels { get; }
     }
 }
